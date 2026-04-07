@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-100: #FDFBF4;
+  --color-gold-200: #FAF4E3;
+  --color-gold-300: #F3E5AB;
+  --color-gold-400: #EBD175;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #B08D2A;
+  --color-gold-700: #8A6E21;
+  --color-gold-800: #634E17;
+  --color-gold-900: #3D300E;
+
+  --color-dark-100: #2A2A2A;
+  --color-dark-200: #202020;
+  --color-dark-300: #181818;
+  --color-dark-400: #111111;
+  --color-dark-500: #0A0A0A;
+  --color-dark-600: #050505;
+  --color-dark-700: #000000;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-script: "Bickham Script Pro", var(--font-great-vibes), var(--font-billion-dreams), cursive;
+  --font-calligraphy: "Bickham Script Pro", var(--font-great-vibes), var(--font-billion-dreams), cursive;
+
+  --background-image-gold-gradient: linear-gradient(to right, #B08D2A, #F3E5AB, #D4AF37);
+  --background-image-dark-gradient: linear-gradient(to bottom, #111111, #050505);
+}
+
+:root {
+  --background: #050505;
+  --foreground: #ededed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer base {
+  section {
+    @apply snap-start snap-always min-h-screen flex items-center justify-center;
+  }
+}
+
+.text-gradient-gold {
+  background-image: linear-gradient(to right, #B08D2A, #F3E5AB, #D4AF37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.box-glow {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+}
+
+.glass-card {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
